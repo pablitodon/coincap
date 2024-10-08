@@ -1,9 +1,15 @@
+import Header from './components/Header/Header';
+import './index.css';
+import Main from './pages/Main/Main';
+
 
 function App() {
-
   return (
     <>
-      Hello
+      <Header />
+      <div className='container'>
+        <Main />
+      </div>
 
     </>
   )

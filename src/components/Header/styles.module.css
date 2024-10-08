@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0px;
+    width: 100%;
+    border-bottom: 1px solid #d9dcdd;
+}
+
+.headerList {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.titleList {
+    font-size: 12px;
+    border-bottom: 1px solid rgb(231, 226, 226) ;
+}
+.wrapperList{
+ display: flex;
+ flex-direction: column;
+ padding: 5px;
+}
