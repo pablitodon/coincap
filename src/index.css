@@ -6,3 +6,8 @@
   box-sizing: border-box;
   font-family:'Lucida Sans Regular', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
+.container{
+  padding: 24px;
+  min-height: 188vh;
+}
