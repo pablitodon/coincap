@@ -11,6 +11,12 @@
     font-weight: bold;
 }
 
+.tdName {
+   text-align: left;
+   width: 250px;
+ 
+}
+
 .tdSymbol{
     color: rgb(221, 12, 46);
 }
