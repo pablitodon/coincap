@@ -1,5 +1,4 @@
-import React from 'react';
-import TableMain from '../../components/TableMain/TableMain';
+import TableMain from '../../components/TableMain/Table/TableMain';
 
 const Main = () => {
     return (
@@ -9,4 +8,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default Main;  
