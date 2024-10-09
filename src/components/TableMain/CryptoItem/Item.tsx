@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from 'react';
 import { plusImage } from '../../../assets';
 import { ICoinCap } from '../../../interfaces';
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
+
 interface Props {
     dataCoins?: ICoinCap[]
 }
