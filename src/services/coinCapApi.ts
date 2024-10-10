@@ -1,6 +1,6 @@
 // Need to use the React-specific entry point to import createApi
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ICoinCapResponse } from "../interfaces";
+import { ICoinCapInfoResponse, ICoinCapResponse } from "../interfaces";
 const BASE_URL = import.meta.env.VITE_COINCAP_API_URL;
 const API_KEY = import.meta.env.VITE_COINCAP_API_KEY;
 
@@ -22,7 +22,19 @@ export const coinCapApi = createApi({
         };
       },
     }),
+    getCoinInfo: builder.query<ICoinCapInfoResponse, string | null>({
+      query: (id) => {
+        return {
+          url: `/assets/${id}`,
+          method: "GET",
+          headers,
+          params: {
+            id,
+          },
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetCoinCapDataQuery } = coinCapApi;
+export const { useGetCoinCapDataQuery, useGetCoinInfoQuery } = coinCapApi;

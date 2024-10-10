@@ -28,3 +28,6 @@
 .text__green {
     color: green;
 }
+.item {
+    cursor: pointer;
+}

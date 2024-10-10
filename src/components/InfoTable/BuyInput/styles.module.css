@@ -1,0 +1,67 @@
+.buyInput {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.coinHeader {
+    display: flex;
+    gap: px;
+    font-size: 23px;
+    padding: 5px;
+}
+.name {
+    color: rgb(250, 158, 148)
+}
+
+.symbol {
+    padding: 0px 5px;
+    border: solid
+}
+
+.inputContainer {
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(234, 236, 203);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.inputLabel {
+    font-weight: bolder;
+    width: 200px;
+    margin: 5px auto;
+}
+
+.inputField {
+    width: 250px;
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 10px;
+    border:solid 1px white;
+transition: border 0.2s, box-shadow 0.2s;
+}
+.inputField:focus{
+    border:solid 1px rgb(186, 186, 186);
+    box-shadow: 0 0 5px rgba(186, 186, 186, 0.7);
+    outline: none;
+}
+
+.buyButton {
+    width: 80px;
+    padding: 5px;
+    margin: 5px auto;
+    border-radius:5px;
+    border:none;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+.buyButton:active {
+    background-color: #242524;
+    transform: scale(0.95);
+}
