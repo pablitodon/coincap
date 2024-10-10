@@ -1,0 +1,51 @@
+.tableInfo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableInfo th{
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 1px;
+}  
+
+.tableInfo tbody td {
+    font-size: 13px;
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 5px;
+} 
+
+.text__red {
+    color: red;
+}
+
+.text__green {
+    color: green;
+}
+.link{
+    text-decoration: underline;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.buttonBack {
+    background-color:rgb(199, 185, 185);
+    width: 150px;
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.buttonBack:active {
+    background-color: #242524;
+    transform: scale(0.95);
+}
+
