@@ -9,7 +9,6 @@ const TableMain = () => {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const pageSize = 10;
 
-
     // PAGINATION
     // Вычисляем индекс последнего элемента на текущей странице
     const indexOfLastItem = currentPage * pageSize;
@@ -17,6 +16,8 @@ const TableMain = () => {
     const indexOfFirstItem = indexOfLastItem - pageSize;
     // Получаем элементы для текущей страницы, используя индексы
     const currentsItems = dataCoins?.data.slice(indexOfFirstItem, indexOfLastItem)
+
+
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error loading data</div>;
@@ -32,7 +33,7 @@ const TableMain = () => {
                         <th>Change(24Hr)</th>
                         <th>Market Cap</th>
                         <th>Price</th>
-                        <th>pl</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
