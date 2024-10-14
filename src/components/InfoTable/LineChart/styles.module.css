@@ -1,4 +1,16 @@
 .linechart {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .linechart {
+        width: 100%;
+        /* Задаем ширину 100% на мобильных */
+        padding: 5px;
+        /* Уменьшаем внутренние отступы на мобильных */
+    }
 }
