@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.walletIcon {
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.briefcaseInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 200px;
+}
+
+.briefcaseInfo span {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.briefcaseInfo p {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgb(72, 71, 71)
+}
+
+.svgIcon {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    /* Тень для SVG */
+    transition: transform 0.3s ease;
+    /* Плавный переход для анимации */
+}
+
+.svgIcon:hover {
+    transform: scale(1.1);
+    /* Увеличение при наведении */
+    fill: url(#gradient);
+    /* Градиент при наведении (если применяется) */
+}

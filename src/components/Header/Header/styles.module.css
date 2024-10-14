@@ -11,12 +11,23 @@
     flex-direction: row;
     gap: 50px;
 }
+
+.headerList li {
+    transition: transform 0.3s ease;
+
+}
+
+.headerList li:hover {
+    transform: scale(1.1);
+}
+
 .titleList {
     font-size: 12px;
-    border-bottom: 1px solid rgb(231, 226, 226) ;
+    border-bottom: 1px solid rgb(231, 226, 226);
 }
-.wrapperList{
- display: flex;
- flex-direction: column;
- padding: 5px;
+
+.wrapperList {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
 }

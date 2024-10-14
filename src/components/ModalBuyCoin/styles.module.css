@@ -1,0 +1,123 @@
+.modal {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: -130px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(81, 78, 78, 0.7);
+    padding: 50px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: visibility 0s linear 0.6s;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Начальная позиция выше */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Конечная позиция */
+    }
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    width: 554px;
+    height: 274px;
+    border-radius: 14px;
+    background: rgba(242, 238, 238, 0.9);
+    opacity: 0;
+    animation: slideIn 0.6s forwards;
+    align-items: center;
+    padding-top: 30px;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modalContent.show {
+    opacity: 1;
+}
+
+strong {
+    color: rgb(248, 70, 50);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #424242;
+    transition: color 0.2s ease;
+    font-weight: bold;
+}
+
+.labelInput {
+    font-weight: bolder;
+    width: 250px;
+    margin: 10px auto;
+}
+
+.inputField {
+    width: 250px;
+    padding: 10px 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: solid 1px white;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.inputField:focus {
+    border: solid 1px rgb(186, 186, 186);
+    box-shadow: 0 0 5px rgba(186, 186, 186, 0.7);
+    outline: none;
+}
+
+.buyBtn {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    padding: 10px 15px;
+    margin: 25px auto;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.buyBtn:hover {
+    background-color: rgba(186, 186, 186, 0.2);
+}
+
+.buyBtn:active {
+    background-color: #242524;
+    transform: scale(0.95);
+}
