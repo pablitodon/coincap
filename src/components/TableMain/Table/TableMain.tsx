@@ -41,6 +41,10 @@ const TableMain = () => {
     if (error) return <div>Error loading data</div>;
     return (
         <>
+            <Pagination
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+            />
             <table className={styles.table}>
                 <thead>
                     <tr>

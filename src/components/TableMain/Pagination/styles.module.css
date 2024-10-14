@@ -1,6 +1,8 @@
 .pagination {
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* Центрируем по вертикали */
     width: 100%;
     text-align: center;
     margin-top: 20px;
@@ -9,17 +11,36 @@
 
 .pageNumber,
 .arrow {
-    border:none;
-    background-color:white;
-    font-weight:bold;
+    border: none;
+    background-color: white;
+    font-weight: bold;
     padding: 10px;
     font-size: 14px;
+    transition: background-color 0.3s;
 }
-.pageNumber,
+
+.pageNumber:hover,
 .arrow:hover {
     cursor: pointer;
+    background-color: #f0f0f0;
 }
+
 .pageNumber:disabled,
 .arrow:disabled {
-    cursor: default
+    cursor: default;
+    opacity: 0.5;
+}
+
+/* Стилизация для мобильных устройств */
+@media (max-width: 600px) {
+    .pagination {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .pageNumber,
+    .arrow {
+        padding: 3px;
+        font-size: 14px;
+    }
 }

@@ -3,12 +3,14 @@
     position: fixed;
     justify-content: center;
     align-items: center;
-    top: -130px;
+    top: 0;
+    /* Изменено для корректного отображения */
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(81, 78, 78, 0.7);
-    padding: 50px;
+    padding: 5%;
+    /* Используем относительное значение для отступов */
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
@@ -25,27 +27,32 @@
     0% {
         opacity: 0;
         transform: translateY(-20px);
-        /* Начальная позиция выше */
     }
 
     100% {
         opacity: 1;
         transform: translateY(0);
-        /* Конечная позиция */
     }
 }
 
 .modalContent {
     display: flex;
     flex-direction: column;
-    width: 554px;
-    height: 274px;
+    width: 90%;
+    /* Адаптивная ширина */
+    max-width: 554px;
+    /* Максимальная ширина для больших экранов */
+    height: auto;
+    /* Позволяет контенту задавать свою высоту */
     border-radius: 14px;
     background: rgba(242, 238, 238, 0.9);
+    padding: 30px;
+    /* Отступы внутри контента */
+    box-sizing: border-box;
+    /* Учитывать паддинги в ширине и высоте */
     opacity: 0;
     animation: slideIn 0.6s forwards;
     align-items: center;
-    padding-top: 30px;
 }
 
 @keyframes slideIn {
@@ -81,18 +88,21 @@ strong {
 
 .labelInput {
     font-weight: bolder;
-    width: 250px;
+    width: 80%;
+    /* Адаптивная ширина */
     margin: 10px auto;
+    text-align: center;
+    /* Центрируем текст */
 }
 
 .inputField {
-    width: 250px;
-    padding: 10px 10px;
+    width: 80%;
+    /* Адаптивная ширина */
+    padding: 10px;
     margin: 5px auto;
     border-radius: 10px;
     border: solid 1px white;
     transition: border 0.2s ease, box-shadow 0.2s ease;
-
 }
 
 .inputField:focus {
@@ -103,8 +113,9 @@ strong {
 
 .buyBtn {
     background-color: rgb(255, 255, 255);
-    width: 150px;
-    padding: 10px 15px;
+    width: 80%;
+    /* Адаптивная ширина */
+    padding: 10px;
     margin: 25px auto;
     border-radius: 5px;
     border: none;
@@ -121,3 +132,10 @@ strong {
     background-color: #242524;
     transform: scale(0.95);
 }
+
+/* Медиазапросы для дополнительных настроек */
+@media (max-width: 600px) {
+    .modalContent {
+        padding: 20px;
+    }
+    }
