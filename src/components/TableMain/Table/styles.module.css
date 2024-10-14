@@ -15,3 +15,53 @@ td {
     border: 1px solid #ddd;
     text-align:center
 } 
+
+/* Стили для мобильных устройств */
+@media (max-width: 600px) {
+    .table thead {
+        display: none;
+        /* Скрываем заголовки на маленьком экране */
+    }
+
+    .table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        /* Отступ между строками */
+        border: 1px solid #ddd;
+        /* Добавляем границу для строк */
+        padding: 10px;
+        /* Отступ внутри строки */
+    }
+
+    .table td {
+        text-align: left;
+        position: relative;
+        padding-left: 50%;
+        /* Отступ слева для текста ячейки */
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    th {
+        font-size: 15px;
+    }
+
+    td {
+        font-size: 13px;
+    }
+}

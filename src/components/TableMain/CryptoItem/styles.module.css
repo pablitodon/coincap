@@ -13,7 +13,6 @@
 
 .tdName {
    text-align: left;
-   width: 250px;
  
 }
 
@@ -30,4 +29,32 @@
 }
 .item {
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid #ddd;
+        /* Для визуального разделения строк */
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .item td {
+        display: block;
+        text-align: center;
+
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .item td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        font-size: 12px
+    }
 }
