@@ -2,10 +2,10 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
 interface CoinIdState {
-    coinId: string | null;
+    coinId: string;
 }
 
-const initialState: CoinIdState = { coinId: null };
+const initialState: CoinIdState = { coinId: '' };
 
 export const coinIdSlice = createSlice({
     name: "coinId",
@@ -13,7 +13,7 @@ export const coinIdSlice = createSlice({
     reducers: {
         setCoinId: (
             state,
-            action: PayloadAction<string | null>
+            action: PayloadAction<string>
         ) => {
             state.coinId = action.payload;
         }

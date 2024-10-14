@@ -1,13 +1,31 @@
 import styles from './styles.module.css';
 import Item from '../CryptoItem/Item';
 import { useGetCoinCapDataQuery } from '../../../services/coinCapApi';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Pagination from '../Pagination/Pagination';
+import ModalBuyCoin from '../../ModalBuyCoin/ModalBuyCoin';
+import { ICoinCap } from '../../../interfaces';
+
+
 
 const TableMain = () => {
     const { data: dataCoins, error, isLoading } = useGetCoinCapDataQuery(null);
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const [currentCoin, setCurrentCoin] = useState<ICoinCap | null>(null);
     const pageSize = 10;
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        }, 500);
+        return () => clearTimeout(timer);
+    }, []);
+
+
+
 
     // PAGINATION
     // Вычисляем индекс последнего элемента на текущей странице
@@ -37,13 +55,14 @@ const TableMain = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Item dataCoins={currentsItems} />
+                    <Item dataCoins={currentsItems} setCurrentCoin={setCurrentCoin} />
                 </tbody>
             </table>
             <Pagination
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
             />
+            <ModalBuyCoin currentCoin={currentCoin} />
         </>
     );
 };
