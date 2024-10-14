@@ -20,3 +20,18 @@ export interface ICoinCapInfoResponse {
   data: ICoinCap;
   timestamp: number;
 }
+
+export interface ICoinHistory {
+  priceUsd: string;
+  time: number;
+}
+
+export interface ICoinHistoryResponse {
+  data: ICoinHistory[];
+  timestamp: number;
+}
+
+export interface IParamsHistory {
+  id: string;
+  interval?: string;
+}

@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { useGetCoinInfoQuery } from '../../../services/coinCapApi';
-import { useAppSelector } from '../../../store';
 import BuyInput from '../BuyInput/BuyInput';
 import styles from './styles.module.css';
 import { useEffect } from 'react';
+import { useAppSelector } from '../../../store';
+import LineChartComponent from '../LineChart/LineChart';
 
 const InfoTable = () => {
     const coinId = useAppSelector(state => state.dataCoinId.coinId);
@@ -14,7 +15,7 @@ const InfoTable = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             window.scrollTo({
-                top: 0,
+                top: 140,
                 behavior: 'smooth',
             });
         }, 500);
@@ -35,7 +36,12 @@ const InfoTable = () => {
         <>
             {coinInfo &&
                 (<div>
-                    <BuyInput name={coinInfo?.name} symbol={coinInfo?.symbol} />
+                    <BuyInput
+                        name={coinInfo?.name}
+                        symbol={coinInfo?.symbol}
+                        id={coinInfo?.id}
+                        price={coinInfo.priceUsd}
+                    />
                     <table className={styles.tableInfo}>
                         <thead>
                             <tr>
@@ -89,6 +95,7 @@ const InfoTable = () => {
                     </table>
                 </div>
                 )}
+            <LineChartComponent />
             <div className={styles.buttonContainer}>
                 <button
                     className={styles.buttonBack}
