@@ -20,18 +20,14 @@ td {
 @media (max-width: 600px) {
     .table thead {
         display: none;
-        /* Скрываем заголовки на маленьком экране */
     }
 
     .table tr {
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
-        /* Отступ между строками */
         border: 1px solid #ddd;
-        /* Добавляем границу для строк */
         padding: 10px;
-        /* Отступ внутри строки */
     }
 
     .table td {

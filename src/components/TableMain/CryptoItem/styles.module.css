@@ -37,7 +37,6 @@
         flex-direction: column;
         text-align: center;
         border: 1px solid #ddd;
-        /* Для визуального разделения строк */
         margin-bottom: 10px;
         padding: 10px;
     }

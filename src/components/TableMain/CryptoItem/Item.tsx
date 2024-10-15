@@ -51,7 +51,8 @@ const Item = ({ dataCoins, setCurrentCoin }: Props) => {
                                     src={plusImage.plus}
                                     alt="plusik"
                                     width={25}
-                                    height={20}
+                                    height={25}
+                                    style={{ margin: '5px', alignItems: 'center' }}
                                 />
                             </td>
                         </tr>
