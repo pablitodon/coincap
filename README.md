@@ -2,10 +2,10 @@
 <br />
 <div align="center">
   <a href="https://react.dev/">
-    <img src="./public/imageReadme/titleReadme.jpg" alt="logo" width="250" height="80">
+    <img src="./public/imageReadme/titleReadme.jpg" alt="logo" width="200" height="130">
   </a>
 
-  <h3 align="center">Youtube-SPA</h3>
+  <h3 align="center">CoinCap</h3>
  <p align="center"> 
     <a href="https://github.com/pablitodon/coincap"><strong>Изучить документацию »</strong></a> 
     <br /> 
