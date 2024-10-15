@@ -65,8 +65,6 @@
     opacity: 1;
 }
 
-
-
 .close {
     position: absolute;
     top: 10px;
@@ -78,43 +76,37 @@
     font-weight: bold;
 }
 
-.labelInput {
-    font-weight: bolder;
-    width: 250px;
-    margin: 10px auto;
+@media (max-width: 768px) {
+    .walletContent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .labelInput,
+    .inputField {
+        width: 90%;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+  
 }
 
-.inputField {
-    width: 250px;
-    padding: 5px;
-    margin: 5px auto;
-    border-radius: 10px;
-    border: solid 1px white;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
-}
+@media (max-width: 480px) {
+    .wallet {
+        padding: 20px;
+    }
 
-.inputField:focus {
-    border: solid 1px rgb(186, 186, 186);
-    box-shadow: 0 0 5px rgba(186, 186, 186, 0.7);
-}
+    .labelInput {
+        font-size: 16px;
+    }
 
-.buyBtn {
-    background-color: rgb(255, 255, 255);
-    width: 150px;
-    padding: 10px 15px;
-    margin: 25px auto;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
+    .inputField {
+        font-size: 14px;
+    }
 
-.buyBtn:hover {
-    background-color: rgba(186, 186, 186, 0.2);
-}
-
-.buyBtn:active {
-    background-color: #242524;
-    transform: scale(0.95);
+    h2 {
+        font-size: 20px;
+    }
 }
