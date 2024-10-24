@@ -65,10 +65,3 @@ const Item = ({ dataCoins, setCurrentCoin }: Props) => {
 
 export default Item;
 
-
-// const handleGetInformForModal = (name: string, price: string, id: string) => {
-//     dispatch(showAndCloseModal(true));
-//     dispatch(setCoinId(id));
-//     dispatch(addCoinToWallet({ name, price: Number(price), id })); // Преобразуем цену в число
-//     document.body.style.overflow = 'hidden';
-// }
