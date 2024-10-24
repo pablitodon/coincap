@@ -24,6 +24,10 @@ const Item = ({ dataCoins, setCurrentCoin }: Props) => {
         setCurrentCoin(item)
     }
 
+    const marketCapInBillion = (item: string) => {
+        return (Number(item) / 1000000000).toFixed(1);
+    }
+
     return (
         <>
             {
@@ -40,7 +44,7 @@ const Item = ({ dataCoins, setCurrentCoin }: Props) => {
                                 {Number(item.changePercent24Hr).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                             </td>
                             <td className={styles.tdVWAP} data-label="Рыночная капитализация">
-                                {`${(Number(item.marketCapUsd) / 1000000000).toFixed(1)} млрд $`}
+                                {`${marketCapInBillion(item.marketCapUsd)} млрд $`}
                             </td>
                             <td className={styles.tdPrice} data-label="Цена">
                                 {`${(Number(item.priceUsd).toFixed(2))}$`}
@@ -65,10 +69,3 @@ const Item = ({ dataCoins, setCurrentCoin }: Props) => {
 
 export default Item;
 
-
-// const handleGetInformForModal = (name: string, price: string, id: string) => {
-//     dispatch(showAndCloseModal(true));
-//     dispatch(setCoinId(id));
-//     dispatch(addCoinToWallet({ name, price: Number(price), id })); // Преобразуем цену в число
-//     document.body.style.overflow = 'hidden';
-// }
